@@ -1,2 +1,4 @@
-# BaseAutomationProject
-This a base project for automation using Serenity BDD
+
+# TestKonex
+This is a repo to test in Konex
+
