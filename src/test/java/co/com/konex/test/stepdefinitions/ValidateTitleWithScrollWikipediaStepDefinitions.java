@@ -1,38 +1,35 @@
 package co.com.konex.test.stepdefinitions;
 
+import co.com.konex.test.tasks.ScrollToTarget;
+import co.com.konex.test.tasks.SearchWikipedia;
+import co.com.konex.test.ui.wikipedia.ArticlePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.serenitybdd.screenplay.targets.Target;
 
-import static co.com.konex.test.constants.Constants.HOME_LABEL;
-import static co.com.konex.test.ui.wikipedia.HomePage.WELCOME_TEXT;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.containsText;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class ValidateHomeTextWikipediaStepDefinitions {
+public class ValidateTitleWithScrollWikipediaStepDefinitions {
 
-    @When("I can get text of the home page in wikipedia")
-    public void iCanGetTextOfTheHomePageInWikipedia() {
-        theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(WELCOME_TEXT, isVisible()).forNoMoreThan(30).seconds()
-        );
-        String tempText = WELCOME_TEXT.resolveAllFor(theActorInTheSpotlight()).get(0).getText();
-        theActorInTheSpotlight().remember(HOME_LABEL, tempText);
+    @When("I want to search a word {string}")
+    public void iWantToSearchAWord(String wordToSearch) {
+        theActorInTheSpotlight().attemptsTo(SearchWikipedia.with(wordToSearch));
     }
 
-    @Then("Observe the home text {string}")
-    public void observeTheHomeText(String labelText) {
-        String tempText = theActorInTheSpotlight().recall(HOME_LABEL);
+    @Then("Validate the title {string} doing Scroll")
+    public void validateTheTitleDoingScroll(String title) {
+        Target tempTarget = ArticlePage.getTitleToSearch(title);
+        theActorInTheSpotlight().attemptsTo(ScrollToTarget.scrollTo(tempTarget));
         theActorInTheSpotlight().should(
-                seeThat(the(WELCOME_TEXT), containsText(labelText)),
-                seeThat(Text.of(WELCOME_TEXT).asString(), equalTo(tempText))
+                seeThat(the(tempTarget), containsText(title)),
+                seeThat(Text.of(tempTarget).asString(), equalTo(title))
         );
+
     }
 
 }

@@ -2,7 +2,6 @@ package co.com.konex.test.models;
 
 public class User {
 
-
     private String email;
     private String password;
 

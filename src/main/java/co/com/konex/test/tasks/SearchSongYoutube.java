@@ -8,10 +8,8 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 import static co.com.konex.test.constants.Constants.SONG_LABEL;
 import static co.com.konex.test.ui.youtube.HomePage.*;
-import static co.com.konex.test.ui.youtube.LoginPage.PASSWORD_EDIT_TEXT;
 import static co.com.konex.test.ui.youtube.SongPage.TITLE_TEXT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 import net.serenitybdd.screenplay.targets.Target;

@@ -1,5 +1,6 @@
 package co.com.konex.test.ui.youtube;
 
+import static co.com.konex.test.utils.Utils.getTarget;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class HomePage {
@@ -19,7 +20,7 @@ public class HomePage {
             "(@aria-label, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '%s')]";
 
     public static Target getTitleGroup(String strTitle) {
-        return Target.the("Title group").locatedBy(String.format(TITLE_GROUP, strTitle.toLowerCase()));
+        return getTarget("Title group", TITLE_GROUP, strTitle.toLowerCase());
     }
 
 }
