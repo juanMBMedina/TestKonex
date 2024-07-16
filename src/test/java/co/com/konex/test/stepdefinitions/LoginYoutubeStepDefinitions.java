@@ -1,6 +1,6 @@
 package co.com.konex.test.stepdefinitions;
 
-import co.com.konex.test.tasks.YoutubeLogin;
+import co.com.konex.test.tasks.LoginYoutube;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -34,7 +34,7 @@ public class LoginYoutubeStepDefinitions {
 
     @When("Login with the email {string} and password {string}")
     public void loginWithTheEmailAndPassword(String strEmail, String strPassword) {
-        theActorInTheSpotlight().attemptsTo(YoutubeLogin.withCredential(strEmail, strPassword));
+        theActorInTheSpotlight().attemptsTo(LoginYoutube.withCredential(strEmail, strPassword));
     }
 
     @Then("Observe the user text {string}")

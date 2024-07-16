@@ -13,27 +13,27 @@ import static co.com.konex.test.ui.youtube.LoginPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
-public class YoutubeLogin implements Task {
+public class LoginYoutube implements Task {
 
     private String strUser;
     private String strPassword;
 
-    public YoutubeLogin(String strUser, String strPassword) {
+    public LoginYoutube(String strUser, String strPassword) {
         this.strUser = strUser;
         this.strPassword = strPassword;
     }
 
-    public YoutubeLogin(User user) {
+    public LoginYoutube(User user) {
         this.strUser = user.getEmail();
         this.strPassword = user.getPassword();
     }
 
-    public static YoutubeLogin withCredential(String strUser, String strPassword) {
-        return instrumented(YoutubeLogin.class, strUser, strPassword);
+    public static LoginYoutube withCredential(String strUser, String strPassword) {
+        return instrumented(LoginYoutube.class, strUser, strPassword);
     }
 
-    public static YoutubeLogin withCredential(User user) {
-        return instrumented(YoutubeLogin.class, user);
+    public static LoginYoutube withCredential(User user) {
+        return instrumented(LoginYoutube.class, user);
     }
 
     @Override
