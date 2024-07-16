@@ -1,13 +1,10 @@
 package co.com.konex.test.stepdefinitions;
 
-import co.com.konex.test.tasks.LoginYoutube;
 import co.com.konex.test.tasks.SearchSongYoutube;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.questions.WebElementQuestion;
 
 import static co.com.konex.test.constants.Constants.SONG_LABEL;
-import static co.com.konex.test.ui.youtube.HomePage.USER_INFO_TEXT;
 import static co.com.konex.test.ui.youtube.SongPage.TITLE_TEXT;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -15,7 +12,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.contai
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
-public class SearchSonYoutubeStepDefinitions {
+public class SearchSongYoutubeStepDefinitions {
 
     @When("Search a son with name {string}")
     public void searchASonWithName(String songTitle) {
