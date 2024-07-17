@@ -1,14 +1,17 @@
 package co.com.konex.test.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+
 public class User {
 
     private String email;
     private String password;
-
-    public User(String email, String password) {
-        this.password = password;
-        this.email = email;
-    }
 
     public String getEmail() {
         return email;

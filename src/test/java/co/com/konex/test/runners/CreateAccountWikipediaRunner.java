@@ -10,11 +10,11 @@ import org.junit.runner.RunWith;
         glue = {"co.com.konex.test.stepdefinitions",
                 "co.com.konex.test.hooks"
         },
-        features = "src/test/resources/features/login_youtube.feature",
+        features = "src/test/resources/features/create_account_wikipedia.feature",
         snippets = SnippetType.CAMELCASE
 )
 
-public class LoginYoutubeRunner {
+public class CreateAccountWikipediaRunner {
 
 }
 

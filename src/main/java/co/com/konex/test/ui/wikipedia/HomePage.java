@@ -13,5 +13,8 @@ public class HomePage {
     public static final Target SEARCH_BUTTON =
             Target.the("Search Button").locatedBy("//button[text()='Buscar']");
 
+    public static final Target CREATE_ACCOUNT_LINK =
+            Target.the("Create Account").locatedBy("//li[@id='pt-createaccount-2']//a//span[text" +
+                    "()='Crear una cuenta']");
 
 }

@@ -1,7 +1,8 @@
 package co.com.konex.test.ui.youtube;
 
-import static co.com.konex.test.utils.Utils.getTarget;
 import net.serenitybdd.screenplay.targets.Target;
+
+import static co.com.konex.test.utils.Utils.getTarget;
 
 public class HomePage {
 

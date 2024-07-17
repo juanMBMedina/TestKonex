@@ -18,6 +18,7 @@ public class SearchSongYoutubeStepDefinitions {
     public void searchASonWithName(String songTitle) {
         theActorInTheSpotlight().attemptsTo(SearchSongYoutube.with(songTitle));
     }
+
     @Then("Successfully observe the song title")
     public void successfullyObserveTheSongTitle() {
         String expectedSong = theActorInTheSpotlight().recall(SONG_LABEL);

@@ -5,16 +5,15 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.jetbrains.annotations.NotNull;
 
 import static co.com.konex.test.constants.Constants.SONG_LABEL;
 import static co.com.konex.test.ui.youtube.HomePage.*;
 import static co.com.konex.test.ui.youtube.SongPage.TITLE_TEXT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-
-import net.serenitybdd.screenplay.targets.Target;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.jetbrains.annotations.NotNull;
 
 public class SearchSongYoutube implements Task {
 
