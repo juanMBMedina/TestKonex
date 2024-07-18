@@ -1,0 +1,16 @@
+co\com\konex\test\utils\Utils.class
+co\com\konex\test\questions\ValidationCaptchaMessage.class
+co\com\konex\test\ui\wikipedia\CreateAccountPage.class
+co\com\konex\test\ui\youtube\SongPage.class
+co\com\konex\test\tasks\SearchSongYoutube.class
+co\com\konex\test\tasks\LoginYoutube.class
+co\com\konex\test\models\User.class
+co\com\konex\test\ui\wikipedia\HomePage.class
+co\com\konex\test\constants\Constants.class
+co\com\konex\test\tasks\ScrollToTarget.class
+co\com\konex\test\models\WikipediaUser.class
+co\com\konex\test\tasks\CreateWikiAccount.class
+co\com\konex\test\tasks\SearchWikipedia.class
+co\com\konex\test\ui\youtube\LoginPage.class
+co\com\konex\test\ui\wikipedia\ArticlePage.class
+co\com\konex\test\ui\youtube\HomePage.class
