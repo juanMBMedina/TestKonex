@@ -16,12 +16,11 @@ variables:
   MAVEN_OPTS: "-Dmaven.repo.local=$(Pipeline.Workspace)/.m2/repository"
 
 steps:
-- task: UseJava@1
+- task: JavaToolInstaller@0
   inputs:
     versionSpec: '1.8'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-    setJavaHome: true
 
 - task: Cache@2
   inputs:
