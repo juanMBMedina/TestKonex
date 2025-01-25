@@ -10,5 +10,8 @@
         <module name="TestKonex" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BaseAutomationProject" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

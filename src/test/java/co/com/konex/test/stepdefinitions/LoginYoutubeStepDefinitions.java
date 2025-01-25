@@ -33,12 +33,12 @@ public class LoginYoutubeStepDefinitions {
     }
 
     @When("Login with the email {string} and password {string}")
-    public void loginWithTheEmailAndPassword(String strEmail, String strPassword) {
-        theActorInTheSpotlight().attemptsTo(LoginYoutube.withCredential(strEmail, strPassword));
+    public void loginWithTheEmailAndPassword(String emailEnv, String passEnv) {
+        theActorInTheSpotlight().attemptsTo(LoginYoutube.withCredential(System.getenv(emailEnv), System.getenv(passEnv)));
     }
 
     @Then("Observe the user text {string}")
-    public void observeTheUserTextJuanBlancoTest01(String userData) {
+    public void observeTheUserTextJuanBlancoTest01(String userEnv) {
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(USER_INFO_BUTTON, isVisible()).forNoMoreThan(30).seconds(),
                 WaitUntil.the(USER_INFO_BUTTON, isEnabled()).forNoMoreThan(30).seconds(),
@@ -48,7 +48,7 @@ public class LoginYoutubeStepDefinitions {
         );
         theActorInTheSpotlight().should(
                 seeThat("The text is visible", the(USER_INFO_TEXT), isVisible()),
-                seeThat("The text contains data", the(USER_INFO_TEXT), containsText(userData))
+                seeThat("The text contains data", the(USER_INFO_TEXT), containsText(System.getenv(userEnv)))
         );
 
     }

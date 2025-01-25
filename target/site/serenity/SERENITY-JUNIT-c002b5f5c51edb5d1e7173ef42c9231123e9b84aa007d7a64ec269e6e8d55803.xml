@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Login in youtube" skipped="0" tests="1" time="15.63" timestamp="2025-01-07 07:21:35"><testcase name="User Youtube login"><failure message="&#13;&#10;Expected: an element that is visible&#13;&#10;     but: no matching element found by [Password edit Text located with: //input[@type='password']]" type="java.lang.AssertionError">&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Login in youtube" skipped="0" tests="1" time="17.57" timestamp="2025-01-07 07:01:55"><testcase name="User Youtube login"><failure message="&#13;&#10;Expected: an element that is visible&#13;&#10;     but: no matching element found by [[FirefoxDriver: firefox on windows (6e34c15e-934c-49ec-bdbb-720eee19a9b0)] -&gt; xpath: //input[@type='password']]" type="java.lang.AssertionError">&#13;
 Expected: an element that is visible&#13;
-     but: no matching element found by [Password edit Text located with: //input[@type='password']]</failure><system-err>&#13;
+     but: no matching element found by [[FirefoxDriver: firefox on windows (6e34c15e-934c-49ec-bdbb-720eee19a9b0)] -&gt; xpath: //input[@type='password']]</failure><system-err>&#13;
 Expected: an element that is visible&#13;
-     but: no matching element found by [Password edit Text located with: //input[@type='password']]&#13;
+     but: no matching element found by [[FirefoxDriver: firefox on windows (6e34c15e-934c-49ec-bdbb-720eee19a9b0)] -&gt; xpath: //input[@type='password']]&#13;
 co.com.konex.test.tasks.LoginYoutube.performAs(LoginYoutube.java:41)&#13;
 net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:519)&#13;
 net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:499)&#13;
