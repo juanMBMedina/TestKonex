@@ -121,5 +121,12 @@ public class Utils {
         return tempString.toString();
     }
 
+    public static void pause(Integer millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

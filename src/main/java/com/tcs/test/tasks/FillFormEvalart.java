@@ -24,7 +24,7 @@ public class FillFormEvalart implements Task {
     public <T extends Actor> void performAs(T actor) {
         try {
             Integer actualCycle = FormPage.getCycle(actor);
-            while (actualCycle <= FormPage.MAX_CYCLE) {
+            for(int i = 0; i < FormPage.MAX_CYCLE;i++) {
                 Integer countEmoji =
                         Utils.countItemIn(FormPage.EMOJI_TEXT_BODY.resolveFor(actor).getText(),
                                 FormPage.getEmoji(actor));
@@ -34,7 +34,7 @@ public class FillFormEvalart implements Task {
                 List<String> operations =
                         FormPage.LIST_OPERATIONS_TEXT.resolveAllFor(actor).texts();
 
-                String radioButtonText = Utils.evaluateExpression(operations.get(0)).toString().replace("=?","");
+                String radioButtonText = Utils.evaluateExpression(operations.get(0)).toString().replace("=?", "");
                 String selectOptionText = Utils.evaluateExpression(operations.get(1)).toString();
                 actor.attemptsTo(
                         Enter.theValue(countEmoji.toString()).into(FormPage.INPUT_COUNT_EMOJI),
@@ -45,6 +45,7 @@ public class FillFormEvalart implements Task {
                         Click.on(FormPage.SEND_BUTTON)
                 );
             }
+            Utils.pause(500000);
 
         } catch (NotFoundTextException e) {
             throw new RuntimeException(e);
