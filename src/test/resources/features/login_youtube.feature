@@ -8,5 +8,5 @@ Feature: Login in youtube
     Then Observe the user text "<user>"
 
     Examples:
-      | email | password | user |
-      | email | password | user |
+      | email     | password | user     |
+      | yourEmail | yourPass | yourUser |
